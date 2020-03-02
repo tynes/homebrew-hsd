@@ -7,6 +7,7 @@ class Hsd < Formula
   sha256 "6a519a6093481b60c04944528ff28752ccac00694c3e47635fa941d42bb7970b"
 
   depends_on "node@10"
+  depends_on "unbound"
   depends_on "python" => "build"
 
   def install
