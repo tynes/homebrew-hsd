@@ -16,6 +16,6 @@ class Hsd < Formula
   end
 
   test do
-    system "#{bin}/hsd", "--version"
+    system "#{HOMEBREW_PREFIX}/bin/hsd", "--version"
   end
 end
