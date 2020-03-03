@@ -14,6 +14,6 @@ class HsClient < Formula
   end
 
   test do
-    system "#{bin}/hs-client", "--version"
+    system "#{bin}/hsd-cli", "--version"
   end
 end
