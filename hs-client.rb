@@ -14,6 +14,6 @@ class HsClient < Formula
   end
 
   test do
-    system "#{HOMEBREW_PREFIX}/bin/hs-client", "--version"
+    system "#{bin}/hs-client", "--version"
   end
 end
