@@ -14,6 +14,6 @@ class HsClient < Formula
   end
 
   test do
-    system "#{libexec}/bin/hsd-cli", "--version"
+    system "#{HOMEBREW_PREFIX}/bin/hsd-cli", "--version"
   end
 end
