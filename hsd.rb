@@ -8,7 +8,7 @@ class Hsd < Formula
 
   depends_on :xcode => :build
   depends_on "python" => :build
-  depends_on "node"
+  depends_on "node@12"
   depends_on "unbound"
 
   def install
