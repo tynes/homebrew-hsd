@@ -16,9 +16,11 @@ class Hsd < Formula
   end
 
   test do
-    pid = spawn "#{HOMEBREW_PREFIX}/bin/hsd --prefix=#{testpath}/data"
-    system "sleep", 1
-    system "kill", pid
-    assert_predicate testpath/"data", :exist?, "Failed to create data directory"
+    (testpath/"script.js").write <<~EOS
+      const assert = require('assert');
+      const hsd = require('#{libexec}/lib/node_modules/hsd');
+      assert(hsd);
+    EOS
+    system "node", testpath/"script.js"
   end
 end
