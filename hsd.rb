@@ -6,7 +6,6 @@ class Hsd < Formula
   url "https://github.com/handshake-org/hsd/archive/v2.1.2.tar.gz"
   sha256 "4fc39ee5ca2b91186847a31b3244ae5d57235720ac40812cf752bb687c0833cf"
 
-  depends_on :xcode => :build
   depends_on "python" => :build
   depends_on "node@10"
   depends_on "unbound"
