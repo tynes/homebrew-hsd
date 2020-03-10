@@ -16,8 +16,9 @@ class Hsd < Formula
   end
 
   test do
-    system "#{HOMEBREW_PREFIX}/bin/hsd", "--daemon", "--prefix=#{testpath}/data"
-    system "pkill" "hsd"
+    pid = spawn "#{HOMEBREW_PREFIX}/bin/hsd --prefix=#{testpath}/data"
+    system "sleep", 1
+    system "kill", pid
     assert_predicate testpath/"data", :exist?, "Failed to create data directory"
   end
 end
