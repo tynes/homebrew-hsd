@@ -21,6 +21,6 @@ class Hsd < Formula
       const hsd = require('#{libexec}/lib/node_modules/hsd');
       assert(hsd);
     EOS
-    system "#{Formula["node@10"].opt_bin}/node", testpath/"script.js" 
+    system "#{Formula["node@10"].opt_bin}/node", testpath/"script.js"
   end
 end
