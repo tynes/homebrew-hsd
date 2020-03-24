@@ -11,7 +11,7 @@ class Hsd < Formula
   depends_on "unbound"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "#{Formula["node@10"].bin/"npm"}", "install", *Language::Node.std_npm_install_args(libexec)
     (bin/"hsd").write_env_script libexec/"bin/hsd", :PATH => "#{Formula["node@10"].opt_bin}:$PATH"
   end
 
