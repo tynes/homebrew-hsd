@@ -20,7 +20,16 @@ class Hsd < Formula
       const assert = require('assert');
       const hsd = require('#{libexec}/lib/node_modules/hsd');
       assert(hsd);
+
+      const node = new hsd.FullNode({
+        prefix: '#{testpath}/.hsd',
+        memory: false
+      });
+      (async () => {
+        await node.ensure();
+      })();
     EOS
     system "#{Formula["node@10"].opt_bin}/node", testpath/"script.js"
+    assert_true File.directory?("#{testpath}/.hsd")
   end
 end
