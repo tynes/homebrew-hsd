@@ -3,8 +3,8 @@ require "language/node"
 class Hsd < Formula
   desc "Handshake Daemon & Full Node"
   homepage "https://handshake.org"
-  url "https://github.com/handshake-org/hsd/archive/v2.1.2.tar.gz"
-  sha256 "4fc39ee5ca2b91186847a31b3244ae5d57235720ac40812cf752bb687c0833cf"
+  url "https://github.com/handshake-org/hsd/archive/v2.1.3.zip"
+  sha256 "d48d07d62c090d9219e8eb3fbfeae53cdff2befda42f048bd0dd50201ccfec62"
 
   depends_on "python" => :build
   depends_on "node@10"
